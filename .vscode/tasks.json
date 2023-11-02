@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/InternetTimeMachine.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish (dll only)",
+            "command": "scp",
+            "type": "process",
+            "args": [
+                "-r",
+                "${workspaceFolder}/bin/Debug/net7.0/InternetTimeMachine.*",
+                "root@192.168.1.181:~/TimeMachine"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish (full)",
+            "command": "scp",
+            "type": "process",
+            "args": [
+                "-r",
+                "${workspaceFolder}/bin/Debug/net7.0/*",
+                "root@192.168.1.181:~/TimeMachine"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/InternetTimeMachine.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

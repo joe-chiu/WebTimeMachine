@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Remote Launch @ OrangePi",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "~/.dotnet/dotnet",
+            "args": ["InternetTimeMachine.dll"],
+            "cwd": "~/TimeMachine/",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "pipeTransport": {
+                "pipeCwd": "${workspaceFolder}",
+                "pipeProgram": "ssh",
+                // using key auth, no need for password
+                "pipeArgs": ["root@192.168.1.181"],
+                "debuggerPath": "~/vsdbg/vsdbg"
+            }
+        }
+   ]
+}
