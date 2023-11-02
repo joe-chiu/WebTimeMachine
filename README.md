@@ -4,3 +4,4 @@ The SBC is connected to a LCD display and a dial, the dial allows for changing t
 The OS should be cofigured to act as a masquerade transparent proxy for all traffic through its ethernet port, and the traffic is then routed to Wayback Machine proxy to fetch archived web pages in desired time framework.
 That's it. The code is mostly about interfacing with the dial and LCD hardware, which was my learning objective. 
 
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/0OB1g8CUdbA/0.jpg)](http://www.youtube.com/watch?v=0OB1g8CUdbA)
